@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+
+
+  <title>Document</title>
+</head>
+<body>
+  <style>
+ 
+
+@media(min-width:568px) {
+    .end {
+        margin-left: auto
+    }
+}
+
+@media(max-width:768px) {
+    #post {
+        width: 100%
+    }
+}
+
+#clicked {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+    width: 100%;
+    background-color: #ecb21f;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 13px
+}
+
+#profile {
+    background-color: unset
+}
+
+#post {
+    
+    padding: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: #fdb035;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    width: 100%
+}
+
+body {
+    background-color: white
+}
+
+
+
+.comments {
+    margin-top: 5%;
+    margin-left: 20px
+}
+
+
+
+.comment {
+    border: 2px solid #a3b5e1;
+    background-color:#14213e;
+    float: left;
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 10px
+}
+
+.comment h4, .comment span{
+    display: inline
+}
+
+.comment p,
+.comment span{
+    color: rgb(184, 183, 183)
+}
+
+h1{
+  color: black;
+    font-weight: bold
+}
+h4 {
+    color: #e5e5e5;
+    font-weight: bold
+}
+
+label {
+    color: rgb(212, 208, 208)
+}
+
+#align-form {
+    margin-top: 20px
+}
+
+.form-group p a {
+    color: white
+}
+
+#checkbx {
+    background-color: black
+}
+
+#darker img {
+    margin-right: 15px;
+    position: static
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #fca311;
+    background-color: #e5e5e5;
+    border-radius: 8px
+}
+
+form {
+    border: 1px solid #a3b5e1;
+    background-color: #14213e;
+    border-radius: 5px;
+    padding: 20px
+}
+  </style>
+ 
+<!-- Main Body -->
+<section>
+    <div class="container">
+       <h1>Comments</h1>
+        <div class="row">
+          
+            <div class="col-md-7 col-12 pb-4">
+               
+                <div class="comment mt-4 text-justify float-left"> 
+                    <h4> <i class="fas fa-id-card"></i>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                </div>
+                <div class="text-justify comment mt-4 float-right"> <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
+                    <h4>Rob Simpson</h4> <span>- 20 October, 2018</span> <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                </div>
+                <div class="comment mt-4 text-justify"> <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
+                    <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                </div>
+                <div class="comment mt-4 text-justify"> <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
+                    <h4>Rob Simpson</h4> <span>- 20 October, 2018</span> <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-12 mt-4">
+                <form id="algin-form">
+                    <div class="form-group">
+                        <h4>Leave a comment</h4> 
+                        <label for="message">Message</label> 
+                        <textarea name="msg" id="" msg cols="30" rows="5" class="form-control" style="background: color #e5e5e5;"></textarea>
+                    </div>
+                   
+                    <div class="form-group"> 
+                      <button type="button" id="post" class="btn">Post Comment</button> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<style>
+
+.container-about{
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+.content-section{
+  float: left;
+  width: 55%;
+  font-family: 'Poppins', sans-serif;
+}
+.image-section{
+  float: right;
+  width: 40%;
+}
+.image-section img{
+  width: 100%;
+  height: auto;
+}
+.content-section .content h5{
+  margin-top: 20px;
+  color: #5d5d5d;
+}
+.content-section .content p{
+  margin-top: 10px;
+  color: #5d5d5d;
+}
+
+@media screen and (max-width:768px){
+  .container-about{
+      width: 80%;
+      display: block;
+      margin: auto;
+      padding-top: 50px;
+  }
+  .content-section{
+      float: none;
+      width: 100%;
+      display: block;
+      margin: auto;
+  }
+  .image-section{
+      float: none;
+      width: 100%;
+     
+  }
+  .image-section img{
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+  }
+  .content-section .title{
+      text-align: center;
+      font-size: 19px;
+      font-family: 'red rose', cursive;
+  }
+
+
+
+}
+</style>
+<div class="sect">
+  <div class="container-about">
+      <div class="content-section">
+          <div class="title">
+              <h1>Erreur !</h1>
+          </div>
+          <div class="content">
+            <p><%= para %></p>
+          </div>
+         
+      </div>
+      <div class="image-section">
+          <img src="https://png.pngtree.com/png-vector/20190412/ourlarge/pngtree-error-illustration-modern-flat-design-concept-of-web-page-design-png-image_930170.jpg" alt="erreur">
+      </div>
+  </div>
+</div>

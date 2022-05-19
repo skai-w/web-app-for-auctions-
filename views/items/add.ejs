@@ -1,0 +1,47 @@
+<div class="container-fluid" style="background-image: url(../../images/bookbackground.png);">
+    <div class="container register mt-55 py-5">
+                     <div class="row">
+                         
+                         <div class="col-md-9 register-right ml-auto mr-auto" >
+                            
+                             <div class="tab-content" id="myTabContent">
+                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                     <h3 class="register-heading">Ajouter un item </h3>
+                                     <form action="/items/add" method="POST">
+                                     <div class="row register-form">
+                                         <div class="col-md-6">
+                                             <div class="form-group">
+                                                 <input type="text" class="form-control" placeholder="nom de l'item *" name="nomItem" value="" />
+                                             </div>
+                                             
+                                             <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="prix estimé *" name="estim" value="" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="description *" name="description" value="" />
+                                            </div>
+                                         </div>
+                                         <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="mot clée *" name="motcle" value="" />
+                                            </div>
+                                            <div>
+                                                <input type="file" class="form-control" id="customFile" name="image" />
+                                                <label class="form-label" for="customFile">Ajouter une photo du l'item</label>
+
+                                            </div>
+                                            
+                                             <input type="submit" class="btnRegister"  value="Ajouter"/>
+                                         </div>
+                                 </div>
+                               </form>
+                                 </div>
+                                
+                             </div>
+                         </div>
+                     </div>
+             
+                 </div>				                            
+                  </div>
+
+               

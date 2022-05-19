@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- css file link-->
+    <link href="./test.css" rel="stylesheet" />
+    <title>Hello, world!</title>
+    
+  
+  </head>
+  <body>
+      <!-- ce nav represente ga3 le header-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+        <a class="navbar-brand mx-3" href="test.html">
+            <i class="fas fa-book-reader h3"></i> <!--icon site-->
+        <span><!--titre site-->
+            MY BOOK'S STORE
+        </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item ">
+              <a class="nav-link" href="test.html">ACCEUIL<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">NEWS</a>
+            </li>
+            <li class="nav-item dropdown has-megamenu">
+              <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PARCOURIR
+              </a>
+              <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none"  >
+                <div class="row g-3">
+                    <div class="col-lg-3 col-6">
+                        <div class="col-megamenu text-left">
+                            <h6 class="title">GENRE</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Fiction</a></li>
+                                <li><a href="#">Polar</a></li>
+                                <li><a href="#">Histoire</a></li>
+                                <li><a href="#">Mystere</a></li>
+                            </ul>
+                            
+                        </div>  <!-- col-megamenu.// -->
+                    </div><!-- end col-3 -->
+                    
+                    <div class="col-lg-3 col-6">
+                        <div class="col-megamenu text-left">
+                            <h6 class="title"> </h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Fantaisie</a></li>
+                                <li><a href="#">Policier</a></li>
+                                <li><a href="#">Drame</a></li>
+                                <li><a href="#">Trailler</a></li>
+                                <li><a href="#">Classique</a></li>
+  
+                            </ul>
+                        </div>  <!-- col-megamenu.// -->
+                    </div><!-- end col-3 -->
+                    
+                    
+                    <div class="col-lg-3 col-6">
+                        <div class="col-megamenu text-left">
+                            <h6 class="title">AUTRE</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#">coin jeunesse</a></li>
+                                <li><a href="#">universitaire</a></li>
+                                <li><a href="#">auto-assistance</a></li>
+                                <li><a href="#">cuisine</a></li>
+                                
+                            </ul>
+                        </div>  <!-- col-megamenu.// -->
+                    </div><!-- end col-3 -->
+                    <div class="col-lg-3 col-6">
+                        <div class="col-megamenu text-left">
+                            <h6 class="title">JUSTE POUR VOUS !</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Best sellers</a></li>
+                                <li><a href="#">Map</a></li>
+                                <li><a href="#">A propos</a></li>
+                                
+                            </ul>
+                        </div>  <!-- col-megamenu.// -->
+                    </div><!-- end col-3 -->
+                    
+                    </div>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT</a>
+              </li>
+              <li class="nav-item mr-3 active">
+                <a class="nav-link" href="compte.html">MON COMPTE</a>
+              </li>
+              
+          </ul>
+        </div>
+      </nav>
+      <!--fin du header-->
+      <div class="container-fluid" style="background-image: url(../img/bookbackground.png);">
+        
+    
+      <div class="container register mt-55 py-5">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                <h3>bienvenue</h3>
+                <p>si vous possedez deja un compte veiller vous connecter</p>
+                <div class="text-center"  >
+                    <a class="btn btnconn2" style="color: #fff;"  href="connect.html" role="button">Se connecter</a>
+
+                     </div>
+            </div>
+            <div class="col-md-9 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">vendeur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">client</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">cree votre compte vendeur</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="willaya " value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="adresse" value="" />
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="num tel " value="" />
+                                </div>
+                                <input type="submit" class="btnRegister"  value="Register"/>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <h3  class="register-heading">cree votre compte client </h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="willaya " value="" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                </div>
+                                <input type="submit" class="btnRegister"  value="Register"/>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>				                            
+     </div>
+      <!--footer-->
+      <div class="container-fluid pb-0 mb-0 justify-content-center text-light  ">
+        <footer>
+            <div class="row my-1 justify-content-center py-5">
+                <class class="col-11">
+                    <div class="row ">
+                        <div class="col">
+                            <h4 class="text-muted mb-md-0 mb-5 bold-text">my book's shop</h4>
+                            
+                        </div>
+                        <div class="col">
+                            <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                            <ul class="list-unstyled">
+                                <li>news</li>
+                                <li>best sellers</li>
+                                <li>map</li>
+                                <li>genre</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                            <p class="mb-1">USTHB,dep-info</p>
+                            <p>BAB EZZOUAR</p>
+                        </div>
+                    
+                        <div class="col ">
+                            <h6 class="text-muted bold-text"><b>binome pfe1</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> binomepfe1@gmail.com</small>
+                        </div>
+                        <div class="col">
+                            <h6 class="text-muted bold-text"><b>binome pfe2</b></h6><small><span><i class="fa fa-envelope" aria-hidden="true"></i></span> binomepfe2@gmail.com</small>
+                        </div></div>
+                        <div class="row">
+                            <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                            <p class="social text-muted mb-0 pb-0 bold-text"> 
+                                <span class="mx-2">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span> 
+                                <span class="mx-2">
+                                    <i class="fab fa-linkedin"></i>
+                                </span> 
+                                <span class="mx-2">
+                                    <i class="fab fa-twitter"></i>
+                                </span> 
+                                <span class="mx-2">
+                                    <i class="fab fa-instagram" ></i>
+                                </span> </p>
+                                <span>&#174;</span>
+                            <small class="rights"> 
+                                my book's shop All Rights Reserved.</small>
+                        </div></div>
+                    </class>
+                </div>
+            
+        </footer>
+    </div>
+      <!--fin de la partie footer-->
+
+
+    
+        
+    
+        
+      
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(){
+            /////// Prevent closing from click inside dropdown
+            document.querySelectorAll('.dropdown-menu').forEach(function(element){
+                element.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            })
+        }); 
+        // DOMContentLoaded  end
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+</body>
+</html>

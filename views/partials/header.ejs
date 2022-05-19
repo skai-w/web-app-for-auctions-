@@ -1,0 +1,43 @@
+<!-- ce nav represente ga3 le header-->
+    
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top " style="background:#2B2E4A">
+    <a class="navbar-brand mx-3" href="http://localhost:3000/items">
+        
+ <span class="h4 font1" style="margin-left: 10px;font-family:'red rose', cursive;"><!--titre site-->
+        KitaBook
+    </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main_nav">
+      <ul class="navbar-nav ml-auto " style="font-size: 17px;font-family: 'Poppins', sans-serif;">
+        <li class="nav-item ">
+          <a class="nav-link"href="http://localhost:3000/items">Acceuil</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"  href="http://localhost:3000/items/news">News</a>
+        </li>
+        
+        
+        <% if(locals.session.isAuth){ %>  
+                <li class="nav-item">
+                  <a class="nav-link" href="../logout">Logout</a>
+                </li>
+                
+
+          <% }else{ %>
+
+                        <li class="nav-item mr-3">
+                          <a class="nav-link" href="http://localhost:3000/users/login">Login</a>
+                        </li>
+                
+            <% } %> 
+
+
+          
+          
+      </ul>
+    </div>
+  </nav>
+  <!--fin du header-->

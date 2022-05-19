@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- css file link-->
+    <link href="./test.css" rel="stylesheet" />
+    <title>Hello, world!</title>
+  </head>
+<body>
+    <style>
+ h4{
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+.container{
+    margin-left: 20px;
+    padding: 5px;
+}
+.stars{
+    color: #f9d71c;
+}
+.date-star{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+}
+.date h6{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.form-group{
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    cursor: pointer;
+}
+.section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
+}
+.container-about{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+.content-section{
+    float: left;
+    width: 55%;
+}
+.image-section{
+    float: right;
+    width: 40%;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+.content-section .content h5{
+    margin-top: 20px;
+    color: #5d5d5d;
+}
+.content-section .content p{
+    margin-top: 10px;
+    color: #5d5d5d;
+}
+.content-section .content .button a{
+    margin-top: 30px;
+    background-color: #14213d;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+    background-color: grey;
+    color: #fff;
+}
+.content-section .social{
+    margin: 40px 40px;
+}
+
+.content-section .social i{
+    color: rgb(59, 59, 95);
+    font-size: 30px;
+    padding: 0px 10px;
+}
+.content-section .social i:hover{
+    color: grey;
+}
+@media screen and (max-width:768px){
+    .container-about{
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-top: 50px;
+    }
+    .content-section{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .image-section{
+        float: none;
+        width: 100%;
+       
+    }
+    .image-section img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .content-section .title{
+        text-align: center;
+        font-size: 19px;
+    }
+    .content-section .content .button{
+        text-align: center;
+    }
+    .content-section .content .button a{
+        padding: 9px 30px;
+    }
+    .content-section .social{
+        text-align: center;
+    }
+
+
+}
+    </style>
+  <div class="review">
+    <h4>Commentaires</h4>
+    <div class="container col-md-7">
+    <!-- ECRITURE DES COMMENTAIRES -->
+    <div id="main-content">
+      <h5>Inserez votre commentaire ici :</h5>
+      <div id="make-comment">
+        <div class="form-group">
+          <!-- Top of the box that contains username and star review -->
+          <div class="box-top">              
+                   <div class="name-user ">
+                       <h5>Username</h5>
+            </div>
+          <label for="commentaire"></label>
+          <!-- commentaire -->
+          <div class="comment-area"> 
+            <textarea class="form-control" placeholder="Votre commentaire" rows="4"></textarea> 
+          </div>
+          <div class="comment-btns mt-2">
+            <div class="row">
+                <div class="col-6">
+                    <div class="pull-right">
+                         <button class="btn btn-success send btn-sm">Send 
+                             <i class="fa fa-long-arrow-right ml-1"></i>
+                        </button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN DE L'ECRITURE DES COMMENTAIRES -->
+    <!-- affichage des commentaire  -->
+      <div id="commentaires" class="card mb-2">
+            <div class="card-body">
+                <h5 class="card-title">Username</h5>
+                <div class="date-star row justify-content-center">
+                      <div class="date col-md-12">
+                        <h6 id="date-com" class="card-substitle text-muted ">Date : 9/12/2020</h6>
+                      </div>
+                </div>
+                <p>ici commentaires</p>
+            </div>        
+      </div>
+      
+  </div>
+      <br>
+    </div>
+   <!-- fin de l'affichage des commentaires -->
+  </div>
+</body>
+</html>
