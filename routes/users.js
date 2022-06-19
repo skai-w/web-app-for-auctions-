@@ -8,18 +8,18 @@ const ItemCtrl = require('../controller/itemctrl')
 // dashboard Route
 router.get('/',ItemCtrl.SearchItem)
 
+router.get('/logout',UserCtrl.logoutMethod)
+
 // New user Route
-router.get('/new',UserCtrl.registerUser )
+router.get('/register',UserCtrl.registerUser )
 
 // Create user Route
 router.post('/', async (req, res) => {
    
   const user = new User({
-    name: req.body.name ,
-    surname: req.body.surname ,
-    mail: req.body.mail ,
-    psw: req.body.psw ,
-    willaya: req.body.willaya
+    username: req.body.username ,
+    email: req.body.email ,
+    password: req.body.password 
   })
   
      await user.save().then(item=>

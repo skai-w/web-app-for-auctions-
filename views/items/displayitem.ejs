@@ -1,0 +1,84 @@
+
+    <style>
+        body{
+            background-color: #080710;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #080710;
+} 
+        .cart {
+            background-color: #212121;
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            width: 100%;
+           
+            padding-top: 9px;
+            box-shadow: 0px 5px 10px  #212121;
+        }
+
+
+        .card-body {
+            width: fit-content;
+        }
+
+        .btn {
+            border-radius: 1;
+        }
+
+        .img-thumbnail {
+            border: none;
+        }
+
+        .card {
+            width: fit-content;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+            border-radius: 5px;
+            padding-bottom: 10px;
+        }
+
+
+    </style>
+
+    
+    <div class="container-fluid">
+        <div class="card mx-auto col-md-3 col-10 mt-5">
+            <form action="/items/displayitem/<%= item._id %>" method="POST">
+            <img class="mx-auto img-thumbnail"
+                src="<%= item.image %>"
+                width="auto" height="auto"/>
+            <div class="card-body text-center mx-auto">
+                <div class="cvp">
+                    <h5 class="card-title font-weight-bold" style="color: #080710"><%= item.nonItem %></h5>
+                    <p class="card-text"style="color: #080710">Estimation : <%= item.estim %></p>
+                    <label for="username"style="color: #080710">Dépôt d'un ordre d'achat</label>
+                  
+                    <input type="text" placeholder="Montant maximum de mon ordre" name="price" id="price">
+                    <input type="submit" class="btn cart px-auto" value="Valider">
+                    <a href="http://localhost:3000/items" class="btn cart px-auto">Retour </a><br />
+                    
+                </div>
+            </div>
+        </form>
+        </div>
+
+    </div>

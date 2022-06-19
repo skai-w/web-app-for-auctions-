@@ -5,6 +5,10 @@ const ItemCtrl = require('../controller/itemctrl')
 const session = require('express-session')
 
 
+const Offer = require('../models/offer')
+
+//router.get('/items/displayall',ItemCtrl.displayall)
+
 //all items route
 router.get('/',ItemCtrl.SearchItem)
 
@@ -40,7 +44,23 @@ const item=new Item(objecto);
 //router.get('/Item/:id',ItemCtrl.showItem)
 
 
-  
+router.get("/displayitem/:id",ItemCtrl.oneitem);
+router.post("/displayitem/:id",async (req,res) => {
+ 
+  const offer = new Offer({
+    price :req.body.price,
+    username : req.session.username.email ,
+    obj : req.params.id
+  })
+console.log("saved offre")
+  await offer.save().then(item => { 
+    res.redirect('/items')})
+  .catch ()
+})
+
+router.get('/',(req, res) => {
+  res.render('/items'), {offer : new Offer() , session : req.session}
+})
   
 
 

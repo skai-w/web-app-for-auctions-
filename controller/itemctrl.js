@@ -4,7 +4,22 @@ const Item = require('../models/item')
 exports.registerItem = (req, res) => {
     res.render('items/add', { item: new Item() ,session : req.session})
   }
-
+ 
+exports.oneitem= async (req, res) => {
+    try {
+      const item = await Item.findById(req.params.id);
+      res.render('items/displayitem',{ 
+        item: item,
+        session :req.session})
+    } catch (err) {
+      const para="erreur d'acces a la base de données"
+      res.render('partials/errorMessage', {
+        session : req.session, 
+        para : para
+      })
+    }
+  }
+ 
 
 exports.SearchItem = async (req, res) => {
     
@@ -32,7 +47,7 @@ exports.SearchItem = async (req, res) => {
       }
       else{
    
-        res.render('items/index',{ 
+        res.render('items/displayall',{ 
           items: rslt,
           searchOptions: req.query,
           session :req.session})
@@ -44,5 +59,6 @@ exports.SearchItem = async (req, res) => {
   }
     
     
-
+  
+  
  

@@ -1,7 +1,7 @@
 const User = require('../models/user')
 
 exports.registerUser = (req, res) => {
-    res.render('users/new', { user: new User() ,session : req.session})
+    res.render('users/register', { user: new User() ,session : req.session})
   }
 
 exports.loginUser = (req, res) => {
@@ -9,7 +9,7 @@ exports.loginUser = (req, res) => {
 } 
 
 exports.loginMethod = (req, res) => {
-  User.find({mail : req.body.email,psw : req.body.password}, function(err,resultat){
+  User.find({email : req.body.email,password : req.body.password}, function(err,resultat){
     if(err){
       const para="erreur : impossible d'acceder a la base de données !"
       res.render('partials/errorMessage', {
@@ -34,3 +34,14 @@ exports.loginMethod = (req, res) => {
   }})
 }
 
+
+exports.logoutMethod =(req,res) => {
+  req.session.destroy(function(err){
+    if(err){
+      console.log(err)
+    }else{
+    res.redirect('/')
+      
+    }
+  })
+}
