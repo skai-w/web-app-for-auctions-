@@ -1,10 +1,33 @@
 const session = require('express-session')
 const Item = require('../models/item')
+const Offer =require('../models/offer')
 
 exports.registerItem = (req, res) => {
     res.render('items/add', { item: new Item() ,session : req.session})
   }
- 
+
+exports.ajoutitem = async (req, res) => {
+  const objecto={
+    nomItem: req.body.nomItem ,
+    estim: req.body.estim,
+    motcle : req.body.motcle,
+    description: req.body.description ,
+};
+if(req.body.image){
+  objecto.image=req.body.image;
+}
+const item=new Item(objecto); 
+
+      await item.save().then(item=>
+        { console.log("done save")
+
+        res.redirect('/items')}
+      )
+  
+    .catch ()
+    
+} 
+
 exports.oneitem= async (req, res) => {
     try {
       const item = await Item.findById(req.params.id);
@@ -31,7 +54,6 @@ exports.SearchItem = async (req, res) => {
      if(req.query.nomItem != null && req.query.nomItem !== ''){
       filter.nomItem = new RegExp(req.query.nomItem, 'i') 
     }
-   //affiche les items avec un prix plus bas que le prix entré
     if(req.query.estim != null && req.query.estim !==''){
       filter.estim = { $lt : req.query.estim} 
     }
@@ -58,7 +80,25 @@ exports.SearchItem = async (req, res) => {
     )
   }
     
-    
   
   
+  exports.ajoutoffre = async (req,res) => {
  
+    const offer = new Offer({
+      price :req.body.price,
+      username : req.session.username.email ,
+      obj : req.params.id
+    })
+  
+  console.log("saved offre")
+    await offer.save().then(async () => { 
+      var ite = await Item.findById(req.params.id);
+        console.log(ite)
+           await Item.updateOne({_id : ite._id }, { etat : "Unavailable"});
+      
+      res.redirect('/items')})
+    .catch ()
+  }
+
+  
+

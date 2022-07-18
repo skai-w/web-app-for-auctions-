@@ -10,11 +10,11 @@ const path = require('path')
 
 const session = require('express-session')
 
-const indexRouter = require('./routes/index')
 const userRouter = require('./routes/users')
 const itemRouter = require('./routes/items')
 
 
+const indexRouter = require('./routes/index')
 
 app.use('/static',express.static(path.join(__dirname,'public')))
 

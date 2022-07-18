@@ -8,6 +8,18 @@ exports.loginUser = (req, res) => {
   res.render('users/login',{session : req.session})
 } 
 
+exports.logoutMethod =(req,res) => {
+  req.session.destroy(function(err){
+    if(err){
+      console.log(err)
+    }else{
+    res.redirect('/')
+      
+    }
+  })
+}
+
+
 exports.loginMethod = (req, res) => {
   User.find({email : req.body.email,password : req.body.password}, function(err,resultat){
     if(err){
@@ -35,13 +47,22 @@ exports.loginMethod = (req, res) => {
 }
 
 
-exports.logoutMethod =(req,res) => {
-  req.session.destroy(function(err){
-    if(err){
-      console.log(err)
-    }else{
-    res.redirect('/')
-      
-    }
+
+exports.registerMethod =async (req, res) => {
+   
+  const user = new User({
+    username: req.body.username ,
+    email: req.body.email ,
+    password: req.body.password 
   })
+  
+     await user.save().then(item=>
+       { console.log("done save")
+
+        res.redirect('/users/login')}
+     )
+    
+   
+   .catch ()
+   
 }

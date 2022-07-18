@@ -76,6 +76,31 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script>
+     
+     setInterval(myTimer, 1000);
+      function myTimer() {
+        var countDownDate = new Date("Jun 21, 2022 00:00:52").getTime();
+        var now = new Date().getTime();
+        var timeleft = countDownDate - now;
+        var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 *     60));
+        var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+        
+        if (timeleft < 0) {
+          clearInterval(myfunc);
+          document.getElementById("days").innerHTML = ""
+          document.getElementById("hours").innerHTML = "" 
+          document.getElementById("mins").innerHTML = ""
+          
+          document.getElementById("end").innerHTML = "TIME UP!!";
+        }
+        document.getElementById("days").innerHTML = days + "d -"
+        document.getElementById("hours").innerHTML = hours + "h -" 
+        document.getElementById("mins").innerHTML = minutes + "m " 
+       
+        
+      }
+      </script>
 </body>
 </html>

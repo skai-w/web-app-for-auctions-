@@ -34,7 +34,11 @@ body {
   box-shadow: #222 1px 0 10px;
   text-decoration: underline;
 }
-   
+
+#timecontent{
+display : flex; 
+align-items : center ; 
+}
 
     </style>
 
@@ -43,11 +47,19 @@ body {
       <% items.forEach(item => { %>
       <div class="col-md-4">
         <div class="card" style="width: 18rem;">
-    <img src="<%= item.image %> " alt="item" class="card-img-top" >
+    <img src="<%= item.image %>" alt="item" class="card-img-top" >
     <div class="card-body">
       <h5 class="card-title"> <%= item.nomItem %> </h5>
+      <h6 class="card-subtitle mb-2 text-muted">Etat: <%= item.etat %> </h6>
           <h6 class="card-subtitle mb-2 text-muted">Estimation: <%= item.estim %> </h6>
       <p class="card-text">DESCRIPTION : <%= item.description %> .</p>
+      <p class="card-text">timer: <div id="timecontent">
+        <p id="days"></p>
+        <p id="hours"></p>
+        <p id="mins"></p>
+        
+        <p id="ends"></p>
+        </div></p>
          <a href="http://localhost:3000/items/displayitem/<%= item._id %>" class="btn mr-2">Encherir </a>
         
      
@@ -55,6 +67,7 @@ body {
     </div>
    
       </div> 
+      
       <% }) %>  
       
         
